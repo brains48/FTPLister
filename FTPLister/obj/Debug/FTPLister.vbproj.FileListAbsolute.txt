@@ -11,3 +11,16 @@ D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPL
 D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
 D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.frmFTPFiles.resources
 D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.Startup.resources
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbprojAssemblyReference.cache
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.frmFTPFiles.resources
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.Resources.resources
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.Startup.resources
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.GenerateResource.cache
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.CoreCompileInputs.cache
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.exe
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.xml
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe.config
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.pdb
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.xml

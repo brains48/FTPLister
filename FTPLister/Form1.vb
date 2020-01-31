@@ -59,21 +59,21 @@ Public Class frmFTPFiles
     End Sub
 
 
-    Private Sub lstFTPFiles_MouseDown(Button As Integer, Shift As Integer, x As Single, y As Single)
-        Dim itm As ListItem
-Set itm = lstFTPFiles.HitTest(x, y)
-If Not (itm Is Nothing) Then
-            If (itm.Selected = False) Then
-                itm.Selected = True
-                itm.Tag = "s"
-            Else
-                itm.Selected = False
-                itm.Tag = ""
-            End If
-        End If
-Set itm = Nothing
+    '    Private Sub lstFTPFiles_MouseDown(Button As Integer, Shift As Integer, x As Single, y As Single)
+    '        Dim itm As ListItem
+    'Set itm = lstFTPFiles.HitTest(x, y)
+    'If Not (itm Is Nothing) Then
+    '            If (itm.Selected = False) Then
+    '                itm.Selected = True
+    '                itm.Tag = "s"
+    '            Else
+    '                itm.Selected = False
+    '                itm.Tag = ""
+    '            End If
+    '        End If
+    'Set itm = Nothing
 
-End Sub
+    'End Sub
 
     Private Sub lblHide_Click(sender As Object, e As EventArgs) Handles lblHide.Click
         Me.Visible = False
