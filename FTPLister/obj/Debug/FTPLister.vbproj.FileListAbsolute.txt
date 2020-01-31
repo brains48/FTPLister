@@ -1,0 +1,13 @@
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.vbprojAssemblyReference.cache
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.Resources.resources
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.GenerateResource.cache
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.CoreCompileInputs.cache
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\bin\Debug\FTPLister.exe.config
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\bin\Debug\FTPLister.exe
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\bin\Debug\FTPLister.pdb
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\bin\Debug\FTPLister.xml
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.exe
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.xml
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.frmFTPFiles.resources
+D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.Startup.resources
