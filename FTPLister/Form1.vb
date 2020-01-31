@@ -75,17 +75,23 @@ Set itm = Nothing
 
 End Sub
 
-    Private Sub lstFTPFiles_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
-        With lstFTPFiles
-            .Visible = False
-            For x = 1 To lstFTPFiles.ListItems.Count
+    Private Sub lblHide_Click(sender As Object, e As EventArgs) Handles lblHide.Click
+        Me.Visible = False
+    End Sub
 
-                If .ListItems(x).Tag = "" Then
-                    .ListItems(x).Selected = False
-                Else
-                    .ListItems(x).Selected = True
-                End If
-            Next x
-            .Visible = True
-        End With
+    'Private Sub lstFTPFiles_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
+    '    With lstFTPFiles
+    '        .Visible = False
+    '        For x = 1 To lstFTPFiles.ListItems.Count
+
+    '            If .ListItems(x).Tag = "" Then
+    '                .ListItems(x).Selected = False
+    '            Else
+    '                .ListItems(x).Selected = True
+    '            End If
+    '        Next x
+    '        .Visible = True
+    '    End With
+
+
 End Class

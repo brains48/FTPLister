@@ -32,6 +32,7 @@ Partial Class frmFTPFiles
         Me.FTPFileType = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.FTPFileName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lblCount = New System.Windows.Forms.Label()
+        Me.lblHide = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'NotifyIcon1
@@ -51,9 +52,9 @@ Partial Class frmFTPFiles
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(69, 12)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(655, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(598, 22)
         Me.TextBox1.TabIndex = 2
         '
         'Button2
@@ -97,12 +98,22 @@ Partial Class frmFTPFiles
         Me.lblCount.TabIndex = 5
         Me.lblCount.Text = "Label1"
         '
+        'lblHide
+        '
+        Me.lblHide.AutoSize = True
+        Me.lblHide.Location = New System.Drawing.Point(14, 8)
+        Me.lblHide.Name = "lblHide"
+        Me.lblHide.Size = New System.Drawing.Size(17, 17)
+        Me.lblHide.TabIndex = 6
+        Me.lblHide.Text = "X"
+        '
         'frmFTPFiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 658)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblHide)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.lstFTPFiles)
         Me.Controls.Add(Me.Button2)
@@ -130,4 +141,5 @@ Partial Class frmFTPFiles
     Friend WithEvents FTPFileType As ColumnHeader
     Friend WithEvents FTPFileName As ColumnHeader
     Friend WithEvents lblCount As Label
+    Friend WithEvents lblHide As Label
 End Class
