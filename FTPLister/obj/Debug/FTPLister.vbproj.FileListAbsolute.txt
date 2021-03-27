@@ -11,16 +11,45 @@ D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPL
 D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
 D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.frmFTPFiles.resources
 D:\Dropbox\Training\00 - Ant Applications\FTP Downloader (VB.Net)\FTPLister\FTPLister\obj\Debug\FTPLister.Startup.resources
-C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbprojAssemblyReference.cache
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.frmFTPFiles.resources
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.Resources.resources
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.Startup.resources
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.GenerateResource.cache
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.CoreCompileInputs.cache
-C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.exe
-C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.xml
-C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe.config
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe.manifest
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.application
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.pdb
 C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.xml
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.exe.manifest
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.application
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.exe
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.xml
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\MySql.Data.dll
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.CopyComplete
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe.CodeAnalysisLog.xml
+C:\Users\brain\Source\Repos\brains48\FTPLister\FTPLister\bin\Debug\FTPLister.exe.lastcodeanalysissucceeded
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FTPLister.exe.config
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FTPLister.exe.manifest
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FTPLister.application
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FTPLister.exe
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FTPLister.pdb
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FTPLister.xml
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.vbprojAssemblyReference.cache
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.frmFTPFiles.resources
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.Resources.resources
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.Startup.resources
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.GenerateResource.cache
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.CoreCompileInputs.cache
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.exe.manifest
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.application
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.vbproj.CopyComplete
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.exe
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.xml
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\obj\Debug\FTPLister.pdb
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\Newtonsoft.Json.dll
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\Newtonsoft.Json.xml
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FluentFTP.dll
+D:\Dropbox\Application Support\_AntTools\FTPLister\FTPLister\bin\Debug\FluentFTP.xml

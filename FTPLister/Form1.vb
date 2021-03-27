@@ -1,97 +1,168 @@
 ﻿Imports System.IO
 Imports System.Net
-
+'publish/deploy to D:\Dropbox\Application Support\_AntTools\FTP
 Public Class frmFTPFiles
 
+    Public FTPFolder As String
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim scr As Screen = Screen.FromPoint(Cursor.Position)
-        Me.Visible = True
-        Dim x As Integer
-        Dim y As Integer
 
-        'Me.Location = New Point(scr.WorkingArea.Right - 697, scr.WorkingArea.Bottom - Me.Height)
-        'MessageBox.Show(Me.Width.ToString) '199
-        'MessageBox.Show(Screen.PrimaryScreen.WorkingArea.Width.ToString) '1536
-        x = 1020 'Screen.PrimaryScreen.WorkingArea.Width - Me.Width
-        y = Screen.PrimaryScreen.WorkingArea.Height - 705
-        'left 1020
-        Me.Location = New Point(x, y)
+        Dim IntPSBH As Integer
+        Dim IntTaskBarHeight As Integer
 
-        Me.Visible = False
+        Call WatchMyFolder()
+
+        FTPFolder = GetConfig("FTPLister", "FTPFolder")
+
+        IntPSBH = My.Computer.Screen.Bounds.Height 'System.Windows.Forms.Screen.PrimaryScreen.Bounds
+        IntTaskBarHeight = IntPSBH - System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height
+
+        Me.Width = 479
+        Me.Height = My.Computer.Screen.Bounds.Height - IntTaskBarHeight
+        Me.Location = New Point(My.Computer.Screen.Bounds.Right, 0)
+        'Me.lvItems.View = View.Details
+        'Me.lvItems.Columns.Add("Modified")
+        'Me.lvItems.Columns.Add("Filename")
+        Call MainFTPListerClass.FTPLister()
+        'Call MainFTPListerClass.FluentFTPLIster()
+        Me.Refresh()
+
+
 
     End Sub
 
     Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
+        FormView.Manage()
 
-        If Me.Visible = True Then
+    End Sub
 
-            Me.Visible = False
+    Private Sub frmFTPFiles_DoubleClick(sender As Object, e As EventArgs) Handles Me.DoubleClick
+        FormView.Manage()
+    End Sub
 
-        Else
+    Private Sub PushStraightToNAS_Click(sender As Object, e As EventArgs) Handles PushStraightToNAS.Click
+        MessageBox.Show(GetConfig("FTPLister", "TorrentPrefix"))
+    End Sub
 
-            Me.Visible = True
-            Me.WindowState = FormWindowState.Normal
-            Me.BringToFront()
-            Call MainFTPListerClass.FTPLister()
+    Private Sub tvFiles_DoubleClick(sender As Object, e As EventArgs) Handles tvFiles.DoubleClick
 
+        MainFTPListerClass.GetSubFiles()
+
+    End Sub
+
+    Private Sub QuitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem.Click
+        Call QuitApp()
+    End Sub
+
+    Private Sub UploadTorrentsToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Call UploadTorrents()
+    End Sub
+
+    Private Sub PushToUploadFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PushToUploadFileToolStripMenuItem.Click
+        Call WriteFiles.PushCheckedToUploadFile()
+        Call FormView.Manage()
+    End Sub
+
+    Private Sub UnpackDownloadsFolderToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Call UnpackDownloadsFolder()
+    End Sub
+
+    Private Sub DownloadViaAPIToPublicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DownloadViaAPIToPublicToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub HideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideToolStripMenuItem.Click
+        Call FormView.Manage()
+    End Sub
+
+    Private Sub PUBLICToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PUBLICToolStripMenuItem.Click
+        Call DownloadViaAPIToPublic("PUBLIC")
+    End Sub
+
+    Private Sub USBSHARE22ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles USBSHARE22ToolStripMenuItem.Click
+        Call DownloadViaAPIToPublic("USBSHARE2-2")
+    End Sub
+
+    Private Sub SynologyDownloadManagerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SynologyDownloadManagerToolStripMenuItem.Click
+        Call OpenSynologyDownloadManager()
+    End Sub
+
+    Private Sub BROWSEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BROWSEToolStripMenuItem.Click
+        'e.g. USBSHARE2-2/0 - 2020
+        Dim strFolder As String, strFolderWashed As String
+
+        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+            strFolder = FolderBrowserDialog1.SelectedPath
         End If
-        'Me.WindowState = FormWindowState.Maximized
-    End Sub
 
+        strFolderWashed = WashMe(strFolder)
+        strFolderWashed = Replace(strFolderWashed, "\", "/")
 
-
-    Private Sub btnPushToUploadFile_Click(sender As Object, e As EventArgs) Handles btnPushToUploadFile.Click
-        Call WriteFiles.PushSelectedToUploadFile()
-        Me.Visible = False
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        Dim result As DialogResult = MessageBox.Show("Sure?", "Title", MessageBoxButtons.YesNo)
-
-        If (result = DialogResult.Yes) Then
-            Application.Exit()
-            End
-        Else
-            MessageBox.Show("Doing nothing")
-        End If
+        strFolderWashed = Replace(strFolderWashed, " ", "%20")
+        '%20
+        Call DownloadViaAPIToPublic(strFolderWashed)
 
     End Sub
 
-
-    '    Private Sub lstFTPFiles_MouseDown(Button As Integer, Shift As Integer, x As Single, y As Single)
-    '        Dim itm As ListItem
-    'Set itm = lstFTPFiles.HitTest(x, y)
-    'If Not (itm Is Nothing) Then
-    '            If (itm.Selected = False) Then
-    '                itm.Selected = True
-    '                itm.Tag = "s"
-    '            Else
-    '                itm.Selected = False
-    '                itm.Tag = ""
-    '            End If
-    '        End If
-    'Set itm = Nothing
-
-    'End Sub
-
-    Private Sub lblHide_Click(sender As Object, e As EventArgs) Handles lblHide.Click
-        Me.Visible = False
+    Private Sub RuTorrentWebsiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RuTorrentWebsiteToolStripMenuItem.Click
+        Call OpenRuTorrent()
     End Sub
 
-    'Private Sub lstFTPFiles_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
-    '    With lstFTPFiles
-    '        .Visible = False
-    '        For x = 1 To lstFTPFiles.ListItems.Count
+    Private Sub FOGIETVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FOGIETVToolStripMenuItem.Click
 
-    '            If .ListItems(x).Tag = "" Then
-    '                .ListItems(x).Selected = False
-    '            Else
-    '                .ListItems(x).Selected = True
-    '            End If
-    '        Next x
-    '        .Visible = True
-    '    End With
+        Dim strFolder As String
 
+        strFolder = "PUBLIC\Other\FogieTV"
+        strFolder = Replace(strFolder, "\", "/")
+        strFolder = Replace(strFolder, " ", "%20")
 
+        Call DownloadViaAPIToPublic(strFolder)
+
+    End Sub
+
+    Private Sub BergToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BergToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Trackers", "Berg")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub ThDimensionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThDimensionToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Trackers", "4thDimension")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub MyAnonaMouseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MyAnonaMouseToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Trackers", "MyAnonaMouse")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub NebulanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NebulanceToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Trackers", "Nebulance")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub SceneTimeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SceneTimeToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Trackers", "SceneTime")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub TVChaosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TVChaosToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Trackers", "TVChaos")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub ResilioSyncToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResilioSyncToolStripMenuItem.Click
+        Call FormView.Manage()
+        Dim webAddress As String = GetConfig("Synology", "ResilioSync")
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub UnpackDownloadsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnpackDownloadsToolStripMenuItem.Click
+        Call UnpackDownloadsFolder()
+    End Sub
 End Class
