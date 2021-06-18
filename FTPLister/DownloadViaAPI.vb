@@ -108,7 +108,7 @@ Module DownloadViaAPI
     Public Function URLEncode(StringToEncode As String, Optional _
    UsePlusRatherThanHexForSpace As Boolean = False) As String
 
-        Dim TempAns As String
+        Dim TempAns As String = ""
         Dim CurChr As Integer
         CurChr = 1
         Do Until CurChr - 1 = Len(StringToEncode)

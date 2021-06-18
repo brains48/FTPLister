@@ -10,7 +10,9 @@ Public Class frmFTPFiles
         Dim IntPSBH As Integer
         Dim IntTaskBarHeight As Integer
 
-        Call WatchMyFolder()
+        Me.TopMost = True
+
+        ' Call WatchMyFolder()
 
         FTPFolder = GetConfig("FTPLister", "FTPFolder")
 
@@ -26,8 +28,6 @@ Public Class frmFTPFiles
         Call MainFTPListerClass.FTPLister()
         'Call MainFTPListerClass.FluentFTPLIster()
         Me.Refresh()
-
-
 
     End Sub
 
