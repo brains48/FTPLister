@@ -9,6 +9,7 @@ Public Class NAS
         Dim blnTest As Boolean
         blnTest = False
         If blnTest = True Then MessageBox.Show("hello")
+        If blnTest = True Then MessageBox.Show("second master branch boolean test")
 
         ' Create a request for the URL.   
         Dim request As WebRequest = WebRequest.Create(strURL)
