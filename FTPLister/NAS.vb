@@ -6,6 +6,10 @@ Public Class NAS
 
     Shared Sub NASGET(strURL As String)
 
+        Dim blnTest As Boolean
+        blnTest = False
+        If blnTest = True Then MessageBox.Show("hello")
+
         ' Create a request for the URL.   
         Dim request As WebRequest = WebRequest.Create(strURL)
         ' If required by the server, set the credentials.  
